@@ -1,4 +1,6 @@
 export type EstadoDoRito = 'vigente' | 'em_queda';
+export type TipoDeMeta = 'quaresma_40' | 'permanente' | 'personalizada';
+export type FrequenciaDeGasto = 'diario' | 'semanal' | 'mensal';
 
 export interface RegistroDeRetorno {
   id: string;
@@ -11,9 +13,13 @@ export interface RegistroDeRetorno {
 export interface Rito {
   id: string;
   nome: string;
+  tituloDaBatalha: string;
+  dataInicioISO: string;
+  dataFimISO: string | null;
+  tipoDeMeta: TipoDeMeta;
+  gastoRecorrente: number;
+  frequenciaDeGasto: FrequenciaDeGasto;
   estado: EstadoDoRito;
-  diasInvictos: number;
-  ouroPreservado: number;
   ultimaQuedaEmISO: string | null;
   registrosDeRetorno: RegistroDeRetorno[];
 }
@@ -22,4 +28,13 @@ export interface NovoRegistroDeRetorno {
   emocaoDominante: string;
   pensamentoNuclear: string;
   escolhaDeTransmutacao: string;
+}
+
+export interface NovoRito {
+  tituloDaBatalha: string;
+  dataInicioISO: string;
+  dataFimISO: string | null;
+  tipoDeMeta: TipoDeMeta;
+  gastoRecorrente: number;
+  frequenciaDeGasto: FrequenciaDeGasto;
 }

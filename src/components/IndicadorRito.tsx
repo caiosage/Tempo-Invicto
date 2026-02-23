@@ -1,4 +1,5 @@
 import { Rito } from '../types/discipline';
+import { calcularDiasInvictos, calcularOuroPreservado } from '../utils/ritoMetrics';
 
 interface IndicadorRitoProps {
   rito: Rito;
@@ -6,6 +7,9 @@ interface IndicadorRitoProps {
 }
 
 export function IndicadorRito({ rito, aoRegistrarQueda }: IndicadorRitoProps) {
+  const diasInvictos = calcularDiasInvictos(rito);
+  const ouroPreservado = calcularOuroPreservado(rito);
+
   return (
     <article className="rounded-2xl border border-bronze/20 bg-slate/40 p-5 shadow-temple backdrop-blur-sm">
       <header className="mb-4 flex items-start justify-between gap-3">
@@ -26,11 +30,11 @@ export function IndicadorRito({ rito, aoRegistrarQueda }: IndicadorRitoProps) {
       <dl className="grid grid-cols-2 gap-3 text-sm">
         <div className="rounded-lg bg-black/20 p-3">
           <dt className="text-[11px] uppercase tracking-[0.16em] text-stone-400">Dias Invictos</dt>
-          <dd className="mt-1 font-serif text-xl text-gold">{rito.diasInvictos}</dd>
+          <dd className="mt-1 font-serif text-xl text-gold">{diasInvictos}</dd>
         </div>
         <div className="rounded-lg bg-black/20 p-3">
           <dt className="text-[11px] uppercase tracking-[0.16em] text-stone-400">Ouro Preservado</dt>
-          <dd className="mt-1 font-serif text-xl text-gold">{rito.ouroPreservado} min</dd>
+          <dd className="mt-1 font-serif text-xl text-gold">{ouroPreservado.toFixed(2)}</dd>
         </div>
       </dl>
     </article>
