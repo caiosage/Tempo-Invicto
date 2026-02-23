@@ -78,37 +78,67 @@ A sessão bônus converte tempo poupado em valor monetário equivalente e exibe 
 - Vite
 - Tailwind CSS
 
+## Pré-requisitos
+
+- Git instalado
+- Node.js LTS (recomendado: 20.x)
+- npm (vem com Node.js)
+- Acesso à internet para baixar dependências e fontes do Google Fonts
+
 ## Como Executar
 
-## 1) Instalar dependências
+## 1) Clonar o repositório
+
+```bash
+git clone https://github.com/caiosage/Tempo-Invicto.git
+cd Tempo-Invicto
+```
+
+## 2) Instalar dependências
+
+Opção recomendada para instalação limpa:
+
+```bash
+npm ci
+```
+
+Alternativa:
 
 ```bash
 npm install
 ```
 
-## 2) Rodar em desenvolvimento
+## 3) Rodar em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-## 3) Acessar no navegador
+## 4) Acessar no navegador
 
 ```text
 http://localhost:5173
 ```
 
-## 4) Build de produção
+## 5) Build de produção
 
 ```bash
 npm run build
 ```
 
-## 5) Preview da build
+## 6) Preview da build
 
 ```bash
 npm run preview
 ```
+
+## Solução de problemas comuns
+
+- PowerShell no Windows pode bloquear `npm` por política de script (`npm.ps1`):
+  - use `npm.cmd run dev` / `npm.cmd run build`, ou
+  - rode os comandos via Git Bash.
+- Se fontes não carregarem, o app continua funcionando, mas pode variar visualmente:
+  - depende de `fonts.googleapis.com` e `fonts.gstatic.com`.
 
 ## Persistência
 
@@ -127,9 +157,6 @@ Cada dia lúcido é matéria-prima.
 Cada escolha sóbria é forja.
 Cada batalha nomeada é um passo da sombra para o ouro.
 
-## Observações
-
-- Estado é persistido em `localStorage` usando a chave `tempus-invictus-templo-v1`.
 
 ## Demonstração
 <img width="976" height="919" alt="image" src="https://github.com/user-attachments/assets/da9ae657-791a-4cec-99e7-dba7a450a991" />
