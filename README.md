@@ -68,8 +68,12 @@ npm run preview
 - Estado é persistido em `localStorage` usando a chave `tempus-invictus-templo-v1`.
 
 ## Demonstração
-<img width="1428" height="908" alt="image" src="https://github.com/user-attachments/assets/f1ba82ff-570b-41f4-aeec-18ef96b973a5" />
-<img width="1528" height="851" alt="image" src="https://github.com/user-attachments/assets/88d9470b-72c9-4503-b758-6eced776b05a" />
+<img width="976" height="919" alt="image" src="https://github.com/user-attachments/assets/da9ae657-791a-4cec-99e7-dba7a450a991" />
+<img width="1201" height="855" alt="image" src="https://github.com/user-attachments/assets/c00c36ef-3de0-4ac0-9588-c13080564e2e" />
+<img width="1029" height="615" alt="image" src="https://github.com/user-attachments/assets/90c8ca8c-b2c8-4402-8c73-3c0d312c23f4" />
+
+
+
 
 
 
