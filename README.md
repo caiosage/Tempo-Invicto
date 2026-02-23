@@ -160,7 +160,11 @@ Cada batalha nomeada é um passo da sombra para o ouro.
 
 ## Demonstração
 <img width="976" height="919" alt="image" src="https://github.com/user-attachments/assets/da9ae657-791a-4cec-99e7-dba7a450a991" />
+
 <img width="1201" height="855" alt="image" src="https://github.com/user-attachments/assets/c00c36ef-3de0-4ac0-9588-c13080564e2e" />
+
+<img width="1379" height="917" alt="image" src="https://github.com/user-attachments/assets/83bea2e1-54d9-4ea0-8623-bd95182eee13" />
+
 <img width="1029" height="615" alt="image" src="https://github.com/user-attachments/assets/90c8ca8c-b2c8-4402-8c73-3c0d312c23f4" />
 
 
