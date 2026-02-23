@@ -14,11 +14,15 @@ export interface Rito {
   id: string;
   nome: string;
   tituloDaBatalha: string;
+  aplicaOuro: boolean;
   dataInicioISO: string;
   dataFimISO: string | null;
   tipoDeMeta: TipoDeMeta;
+  proventosMensais: number;
   gastoRecorrente: number;
   frequenciaDeGasto: FrequenciaDeGasto;
+  tempoRecorrenteEmHoras: number;
+  frequenciaDeTempo: FrequenciaDeGasto;
   estado: EstadoDoRito;
   ultimaQuedaEmISO: string | null;
   registrosDeRetorno: RegistroDeRetorno[];
@@ -32,9 +36,13 @@ export interface NovoRegistroDeRetorno {
 
 export interface NovoRito {
   tituloDaBatalha: string;
+  aplicaOuro: boolean;
   dataInicioISO: string;
   dataFimISO: string | null;
   tipoDeMeta: TipoDeMeta;
+  proventosMensais: number;
   gastoRecorrente: number;
   frequenciaDeGasto: FrequenciaDeGasto;
+  tempoRecorrenteEmHoras: number;
+  frequenciaDeTempo: FrequenciaDeGasto;
 }
