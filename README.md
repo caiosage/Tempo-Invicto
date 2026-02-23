@@ -1,25 +1,74 @@
 # Tempus Invictus
 
-Protótipo de acompanhamento de sobriedade com temática de disciplina pessoal.
+> "Quem domina o tempo, domina a si."
 
-## Contexto do protótipo
+Tempus Invictus não é apenas um rastreador de hábitos. É um templo digital de vigilância interior, onde cada batalha recebe nome, cada queda recebe verdade, e cada dia sóbrio retorna como ouro e tempo reconquistados.
 
-Ao abrir o aplicativo, o usuário configura sua batalha principal (ex.: alcoolismo, cigarro, pornografia, redes sociais) e define:
+## Visão Filosófica
 
-- Nome do vício/inimigo
+Este projeto parte de uma tese simples: a liberdade não nasce da negação da queda, mas da repetição consciente do retorno.
+
+- O vício é tratado como inimigo nomeado, não como abstração.
+- A sobriedade é tratada como rito, não como evento isolado.
+- O progresso é tratado como transmutação: do chumbo ao ouro.
+
+## Escopo Atual
+
+Ao iniciar, o guerreiro configura uma ou mais batalhas com:
+
+- Inimigo da vigília (seleção temática)
 - Data de início da sobriedade
-- Tipo de meta:
-  - `40 dias de sobriedade` (Quaresma do Guerreiro)
-  - `Sobriedade permanente` (Tempus Invictus)
-  - `Data final personalizada`
-- Gasto recorrente com o vício (`diário`, `semanal` ou `mensal`)
+- Meta:
+  - 40 dias (Quaresma do Guerreiro)
+  - Permanente (∞)
+  - Personalizada
+- Tempo drenado pelo inimigo (diário/semanal/mensal)
+- Tributo em ouro (quando aplicável)
+- Informações adicionais opcionais (proventos mensais)
 
-Com base nesses dados, o app mostra:
+## Regras de Negócio Implementadas
 
-- Dias invictos
-- Ouro preservado (valor economizado)
-- Gráfico de pizza com distribuição do ouro preservado
-- Ritual de retorno (registro após queda)
+## 1) Batalhas com e sem ouro
+
+- Para `brain rot` e `redes sociais`, o sistema remove o componente de ouro.
+- Nesses casos:
+  - O onboarding oculta o bloco de ouro.
+  - O Templo oculta cards e gráfico de ouro quando apenas essas batalhas estão selecionadas.
+
+## 2) Meta de sobriedade
+
+- Meta de 40 dias ajusta automaticamente a data final com base na data inicial.
+- Meta permanente exibe símbolo de infinito (∞).
+- Meta personalizada exige data final válida.
+
+## 3) Queda e ritual obrigatório
+
+- Ao clicar em `Registrar Queda`, o app redireciona para a página do Ritual de Retorno.
+- O retorno ao Templo depende de `Selar Ritual de Retorno` com campos preenchidos.
+- Após selar, a contagem reinicia para o novo ciclo.
+
+## 4) Múltiplas batalhas e filtros
+
+- É possível registrar múltiplas batalhas.
+- Gráficos respeitam checkboxes de seleção por batalha.
+- Há descritivo explícito das batalhas consideradas nos cálculos.
+
+## 5) Sessão bônus: Time is Money
+
+Com base em proventos mensais opcionais, o sistema estima equivalências de valor/hora (modelo CLT comum):
+
+- 8h por dia
+- 5 dias por semana
+
+A sessão bônus converte tempo poupado em valor monetário equivalente e exibe projeções no gráfico.
+
+## Validações Funcionais (QA)
+
+- Build TypeScript + Vite validado.
+- Fluxo de queda e retorno validado.
+- Correção de persistência visual após queda (filtros e projeções).
+- Correções de acentuação e textos temáticos validadas.
+- Tooltips de explicação adicionados para transparência de cálculo.
 
 ## Stack
 
@@ -29,7 +78,7 @@ Com base nesses dados, o app mostra:
 - Vite
 - Tailwind CSS
 
-## Como rodar localmente
+## Como Executar
 
 ## 1) Instalar dependências
 
@@ -37,31 +86,46 @@ Com base nesses dados, o app mostra:
 npm install
 ```
 
-## 2) Subir em modo desenvolvimento
+## 2) Rodar em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-## 3) Abrir no navegador
-
-Normalmente:
+## 3) Acessar no navegador
 
 ```text
 http://localhost:5173
 ```
 
-## Build de produção
+## 4) Build de produção
 
 ```bash
 npm run build
 ```
 
-## Preview do build
+## 5) Preview da build
 
 ```bash
 npm run preview
 ```
+
+## Persistência
+
+- Estado salvo em `localStorage` na chave:
+  - `tempus-invictus-templo-v1`
+
+## Nota de Privacidade
+
+- O campo de proventos mensais é opcional e utilizado apenas para estimativas locais no próprio navegador.
+- Não há backend persistindo dados sensíveis nesta versão do protótipo.
+
+## Síntese
+
+Tempus Invictus não mede perfeição. Mede retorno.
+Cada dia lúcido é matéria-prima.
+Cada escolha sóbria é forja.
+Cada batalha nomeada é um passo da sombra para o ouro.
 
 ## Observações
 
